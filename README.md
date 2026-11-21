@@ -78,7 +78,7 @@ Below is a curated comparison of hosted cloud platforms, dedicated Mac bare-meta
 
 ## 💻 Open-Source GitHub Projects
 
-All open-source runtimes, array frameworks, and distributed clusters supporting Vision-Language Models on Apple Silicon, ranked by GitHub Star Count (descending). Each repository features a real-time star badge linking to its GitHub stargazers page:
+All open-source runtimes, array frameworks, and distributed clusters supporting Vision-Language Models on Apple Silicon, ranked by GitHub Stars_Count (descending). Each repository features a real-time Stars_Badge linking to its GitHub stargazers page:
 
 1. **[Ollama](https://github.com/ollama/ollama)** [![Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
    The most widely adopted open-source local model runner for macOS. Features native Metal acceleration for running multimodal vision models (LLaVA, Llama 3.2 Vision, Qwen2.5-VL, Gemma 3) with an easy CLI and OpenAI-compatible REST server.
@@ -164,7 +164,7 @@ Contributions are always welcome! Help keep this ecosystem guide up-to-date for 
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch** (`git checkout -b feature/add-new-vlm-project`).
 3. 📝 **Add your project** under the appropriate section (following the existing table or list format).
-4. ⭐ **Include repository link, description, and star badge**.
+4. ⭐ **Include repository link, description, and Stars_Badge**.
 5. 🚀 **Submit a Pull Request** with a concise description of the addition.
 
 ---
