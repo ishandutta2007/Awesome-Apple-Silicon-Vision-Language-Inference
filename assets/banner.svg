@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14" />
+      <stop offset="50%" stop-color="#0d1124" />
+      <stop offset="100%" stop-color="#06070c" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3b30" />
+      <stop offset="25%" stop-color="#af52de" />
+      <stop offset="50%" stop-color="#5856d6" />
+      <stop offset="75%" stop-color="#007aff" />
+      <stop offset="100%" stop-color="#34c759" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5856d6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#007aff" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2d55" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#af52de" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="meshGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00c7be" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="blurFilter">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .grid-line { stroke: rgba(255, 255, 255, 0.04); stroke-width: 1; }
+    .node-orbit { fill: none; stroke: rgba(88, 86, 214, 0.25); stroke-dasharray: 4 6; }
+    
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(20px, -15px); opacity: 0.6; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      50% { transform: translateY(-30px) translateX(15px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+    }
+    @keyframes rotateRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes dashMove {
+      to { stroke-dashoffset: -100; }
+    }
+
+    .pulse-blob1 { animation: pulseGlow 8s ease-in-out infinite alternate; transform-origin: 250px 180px; }
+    .pulse-blob2 { animation: pulseGlow 10s ease-in-out 2s infinite alternate; transform-origin: 950px 220px; }
+    .particle-1 { animation: floatParticle 5s ease-in-out infinite; }
+    .particle-2 { animation: floatParticle 7s ease-in-out 1.5s infinite; }
+    .particle-3 { animation: floatParticle 6s ease-in-out 3s infinite; }
+    .rotating-wheel { animation: rotateRing 35s linear infinite; transform-origin: 600px 210px; }
+    .animated-dash { stroke-dasharray: 8 12; animation: dashMove 12s linear infinite; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Dynamic Ambient Glowing Orbs -->
+  <circle class="pulse-blob1" cx="220" cy="160" r="190" fill="url(#glowGrad1)" filter="url(#blurFilter)" />
+  <circle class="pulse-blob2" cx="980" cy="240" r="220" fill="url(#glowGrad2)" filter="url(#blurFilter)" />
+  <circle cx="600" cy="210" r="280" fill="url(#meshGrad)" filter="url(#blurFilter)" />
+
+  <!-- Animated High-Tech Neural Grid Lines -->
+  <g>
+    <line x1="0" y1="70" x2="1200" y2="70" class="grid-line" />
+    <line x1="0" y1="140" x2="1200" y2="140" class="grid-line" />
+    <line x1="0" y1="210" x2="1200" y2="210" class="grid-line" />
+    <line x1="0" y1="280" x2="1200" y2="280" class="grid-line" />
+    <line x1="0" y1="350" x2="1200" y2="350" class="grid-line" />
+
+    <line x1="150" y1="0" x2="150" y2="420" class="grid-line" />
+    <line x1="300" y1="0" x2="300" y2="420" class="grid-line" />
+    <line x1="450" y1="0" x2="450" y2="420" class="grid-line" />
+    <line x1="600" y1="0" x2="600" y2="420" class="grid-line" />
+    <line x1="750" y1="0" x2="750" y2="420" class="grid-line" />
+    <line x1="900" y1="0" x2="900" y2="420" class="grid-line" />
+    <line x1="1050" y1="0" x2="1050" y2="420" class="grid-line" />
+  </g>
+
+  <!-- Interactive Dynamic Orbital Circuit Rings (Background / Ambient) -->
+  <g class="rotating-wheel">
+    <circle cx="600" cy="210" r="170" class="node-orbit animated-dash" />
+    <circle cx="600" cy="210" r="250" class="node-orbit animated-dash" style="stroke: rgba(0, 199, 190, 0.2); animation-direction: reverse; animation-duration: 25s;" />
+  </g>
+
+  <!-- Floating Dynamic Particle Nodes -->
+  <g>
+    <circle cx="280" cy="90" r="4" fill="#007aff" class="particle-1" />
+    <circle cx="920" cy="110" r="5" fill="#af52de" class="particle-2" />
+    <circle cx="160" cy="310" r="3.5" fill="#34c759" class="particle-3" />
+    <circle cx="1040" cy="320" r="4.5" fill="#ff9500" class="particle-1" />
+    <circle cx="530" cy="50" r="3" fill="#5856d6" class="particle-2" />
+    <circle cx="710" cy="370" r="4" fill="#00c7be" class="particle-3" />
+  </g>
+
+  <!-- Left Feature Card Badge -->
+  <g transform="translate(60, 48)">
+    <rect width="180" height="38" rx="19" fill="#161828" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <circle cx="22" cy="19" r="6" fill="#30d158" />
+    <text x="38" y="24" fill="#e5e5ea" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Apple Silicon M1-M4</text>
+  </g>
+
+  <!-- Right Feature Card Badge -->
+  <g transform="translate(960, 48)">
+    <rect width="180" height="38" rx="19" fill="#161828" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <circle cx="22" cy="19" r="6" fill="#0a84ff" />
+    <text x="38" y="24" fill="#e5e5ea" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">MLX + Metal + VLM</text>
+  </g>
+
+  <!-- High-Contrast Crisp Foreground Typography -->
+  <g id="foreground-content">
+    <!-- Top Pill / Super-title -->
+    <text x="600" y="115" text-anchor="middle" fill="#00c7be" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="3" text-transform="uppercase">
+      ⚡ UNIFIED MEMORY • METAL ACCELERATION • NATIVE MLX
+    </text>
+
+    <!-- Main Title -->
+    <text x="600" y="185" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+      Apple Silicon Vision-Language Inference
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="600" y="235" text-anchor="middle" fill="#98989d" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="400">
+      Curated Hub of Runtimes, Local VLM Engines &amp; Hosted Apple Mac Infrastructure
+    </text>
+
+    <!-- Feature Architecture Pills (Centered Foreground) -->
+    <g transform="translate(230, 285)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="65" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🍎 Apple MLX</text>
+
+      <!-- Pill 2 -->
+      <rect x="150" y="0" width="140" height="36" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="220" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">⚡ llama.cpp GGUF</text>
+
+      <!-- Pill 3 -->
+      <rect x="310" y="0" width="130" height="36" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="375" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">👁️ mlx-vlm</text>
+
+      <!-- Pill 4 -->
+      <rect x="460" y="0" width="130" height="36" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="525" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🦙 Ollama</text>
+
+      <!-- Pill 5 -->
+      <rect x="610" y="0" width="130" height="36" rx="18" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+      <text x="675" y="23" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🌐 Exo Cluster</text>
+    </g>
+
+    <!-- Bottom Accent Border Glow Line -->
+    <rect x="100" y="380" width="1000" height="3" rx="1.5" fill="url(#accentGrad)" />
+  </g>
+</svg>
