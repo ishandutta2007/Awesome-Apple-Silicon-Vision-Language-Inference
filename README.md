@@ -43,35 +43,13 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[LM Studio](https://lmstudio.ai)**  
-
-  Polished local desktop application for Apple Silicon Macs with native MLX and `llama.cpp` backends, one-click VLM downloads, image drag-and-drop chat, and a local OpenAI-compatible API server.
-
-
-
-- **[MacStadium (Orka Cloud)](https://macstadium.com)**  
-
-  Cloud-hosted Apple Silicon (M1/M2/M3/M4) bare-metal and virtualized Mac infrastructure for scaling remote MLX and Metal multimodal inference workloads.
-
-
-
-- **[AWS EC2 Mac Instances](https://amazon.com)**  
-
-  On-demand Apple Silicon cloud servers enabling CI/CD benchmarking, automated testing, and cloud deployment of macOS VLM pipelines.
-
-
-
-- **[Scaleway Apple Silicon Cloud](https://scaleway.com)**  
-
-  Dedicated cloud-hosted Apple Silicon Mac minis for running persistent MLX, Ollama, and Core ML vision-language APIs.
-
-
-
-- **[Hugging Face Inference Endpoints & Spaces](https://huggingface.co)**  
-
-  Managed cloud hosting and model hub distribution platform powering the `mlx-community` pre-quantized 4-bit and 8-bit Vision-Language Model ecosystem.
+| Company / Platform | Size (Valuation / Revenue) | Starting Pricing Tier | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[AWS EC2 Mac Instances](https://amazon.com)** | ~$2.2T Market Cap (AWS: ~$184B annualized revenue run-rate) | $0.650/hour (`mac2.metal` M1, 24-hr minimum commitment = $15.60/allocation) | Free tier includes 750 hrs/month of `t2.micro`/`t3.micro` for 12 months + $100–$200 sign-up credits valid for 6 months (Note: physical EC2 Mac Dedicated Hosts are excluded from free credits) | On-demand Apple Silicon cloud servers enabling CI/CD benchmarking, automated testing, and cloud deployment of macOS VLM pipelines. |
+| **[Scaleway Apple Silicon Cloud](https://scaleway.com)** | Parent Iliad Group: >€10B revenue (Scaleway: ~€100M–€200M revenue) | €0.17/hour or €115/month (Mac mini M2, 24-hour minimum allocation period) | Free-forever tier offers 1,000,000 Serverless Functions requests/month, 400,000 GB-s compute/month, and 1,000,000 free tokens for Generative AI APIs; new business accounts receive €100 trial credits | Dedicated cloud-hosted Apple Silicon Mac minis for running persistent MLX, Ollama, and Core ML vision-language APIs. |
+| **[Hugging Face Inference Endpoints & Spaces](https://huggingface.co)** | $4.5B Valuation (~$150M ARR) | $0.03/hour (CPU Basic) / $9/month (Pro Tier) / $0.50/hour (T4 GPU Endpoint) | Free-forever tier includes unlimited public repositories, free CPU Basic Spaces (2 vCPU, 16 GB RAM), and free community ZeroGPU quota allocations | Managed cloud hosting and model hub distribution platform powering the `mlx-community` pre-quantized 4-bit and 8-bit Vision-Language Model ecosystem. |
+| **[MacStadium (Orka Cloud)](https://macstadium.com)** | ~$13M–$35M Revenue ($68M total funding raised) | $109/month (Mac mini M2.S, 8-Core / 8GB RAM / 256GB SSD) | Free-forever local Orka Desktop tool for managing Apple Silicon VMs; no free trial for cloud hardware (enterprise PoC available upon sales consultation) | Cloud-hosted Apple Silicon (M1/M2/M3/M4) bare-metal and virtualized Mac infrastructure for scaling remote MLX and Metal multimodal inference workloads. |
+| **[LM Studio](https://lmstudio.ai)** | ~$1.8M Revenue ($19.3M venture funding raised) | $0/month (Free for personal and internal commercial use); $20/month (Bionic+ tier) | Free-forever tier with unlimited local inference, model downloads, chat UI, and local OpenAI-compatible API serving on user hardware; paid features include 14-day trial | Polished local desktop application for Apple Silicon Macs with native MLX and `llama.cpp` backends, one-click VLM downloads, image drag-and-drop chat, and a local OpenAI-compatible API server. |
 
 
 
